@@ -3,8 +3,6 @@
 // -Dentro de la funcion creo un ciclo de waile que se ejecute mientras no que la coindicion sea o un espacio o un numero
 // -Si el personaje que ingrese coincide con la busqueda lo muestro y lo guardo en una variable y genero otra variable que vaya contando cuantos
 // personajes tengo seleccionado
-
-
 // hacer 14 variables que guarden los elementos y luego comparar si lo ingresado es igual a alguna de esas variables
 
 let personaje = ""
