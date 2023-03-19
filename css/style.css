@@ -1,0 +1,57 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet');
+
+{
+    font-family: 'Righteous', cursive;
+    background-color: #fe0016;
+
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet');
+
+*{
+    font-family: 'Press Start 2P', cursive;
+    background-color: #fe0016;
+
+}
+
+
+
+.gridContainer header a img{
+    width: 180px;
+    height: 150px;
+}
+
+h1{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.searchContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searchContainer input{
+    height: 50px;
+    color: #ffffff;
+}
+
+.sectionContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+div h3{
+    text-align: center;
+    color: #ffd700;
+}
+
+
+
+footer{
+
+}
