@@ -10,21 +10,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet');
 
 *{
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
-    background-color: #fe0016;
+    
 
 }
 
+::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    background-color: #161515;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #f3cc41;
+    border-radius: 7.5px;
+}
 
 
-.gridContainer header a img{
+header{
+    background-color: #161515;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding: 20px;
+    column-gap: 80%;
+}
+
+header .logo img{
     width: 180px;
     height: 150px;
+    
+}
+
+header a .coinIcon{
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: auto;
 }
 
 h1{
-    font-size: 50px;
-    color: #ffffff;
+    padding: 50px;
+    font-size: 70px;
+    color: #ffffff ;
+    background-color: #161515;
     text-align: center;
 }
 
@@ -32,26 +62,212 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 30px;
+    background-color: #161515;
 }
 
 .searchContainer input{
     height: 50px;
-    color: #ffffff;
+    background-color: #ffffff; 
+    color: #161515;
+    border-radius: 10px;
 }
+
 
 .sectionContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: rgb(255, 255, 255);
 }
 
-div h3{
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #151616;
+    grid-row: span 9;
+    width: 250px;
+}
+.filterCategory{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 100px;
+}
+
+.filterCategory li{
+    margin: 20px;
+}
+
+.filterCategory li button{
+    background-color: #E21414;
+    color: #FFFAE7;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.personajeCard{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
     text-align: center;
-    color: #ffd700;
+    width: 250px;
+    height: 350px;
+    background-color: #161515;
+    border-radius: 40px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
+.personajeCard h3{
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 30px;
+    
+}
+
+.personajeCard img{
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    margin: auto;
+    
+}
+
+.personajeCard .subCard{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+
+
+.personajeCard .subCard a{
+    color: #FFFAE7;
+    background-color: #E21414 ;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 40px;
+    width: 100%;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: 1s all;
+
+}
+
+.personajeCard .subCard a p{
+    transition: 0.2s;
+}
+
+.personajeCard .subCard a:hover{
+    background-color: #f3cc41;
+    
+}
+
+.personajeCard .subCard a p:hover{
+    color: #161515;
+}
+
+.personajeCard a p{
+    text-align: center;
+    
+}
+
+
+.personajeCard p{
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    
+}
+
+.containerCarrito{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCarrito h2{
+    font-size: 30px;
+    padding-bottom: 90px;
+}
+
+.personajeCardCarrito{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 150px 150px;
+    background-color: #f3cc41;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.personajeCardCarrito div h3{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+.personajeCardCarrito p{
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.personajeCardCarrito img{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.botonFinalizar{
+    text-align: center;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonFinalizar button{
+    width: 200px;
+    height: 80px;
+    background-color: #E21414;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botonFinalizar button:hover{
+    background-color: #f3cc41;
+    color: #161515;
+    
+}
 
 
 footer{
+    background-color: #161515;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
 
+
+}
+
+
+footer h3:hover{
+    color: #E21414;
 }
