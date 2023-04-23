@@ -1,23 +1,22 @@
 /* CLASES DE JAVASCRIPT Y VARIABLES GLOBALES*/
-
 const personajesCarrito = []
 
-const personajes = [{nombre: "mario bros", genero: "masculino", especie: "humano", vivienda: "reino champiñon", valor: 1100},
-                    {nombre: "luigi", genero: "masculino ", especie: "humano", vivienda: "reino champiñón", valor: 950},
-                    {nombre: "princess peach", genero: "femenino", especie: "humano", vivienda: "reino champiñon", valor: 1040},
-                    {nombre: "toad", genero: "másculino", especie: "toad", vivienda: "reino champiñon", valor: 500},
-                    {nombre: "bowser", genero: "másculino", especie: "koopa", vivienda: "castillo de bowser", valor: 750},
-                    {nombre: "yoshi", genero: "másculino", especie: "yoshi", vivienda: "isla yoshi", valor: 800},
-                    {nombre: "daisy", genero: "femenino", especie: "humano", vivienda: "reino sarasaland", valor: 1020},
-                    {nombre: "wario", genero: "másculino", especie: "humano", vivienda: "reino champiñon", valor: 1150},
-                    {nombre: "waluigi", genero: "másculino", especie: "humano", vivienda: "reino champiñon", valor: 900},
-                    {nombre: "rosalina", genero: "femenino", especie: "humano-mago", vivienda: "planetarium del cometa", valor: 1000},
-                    {nombre: "bowser jr", genero: "másculino", especie: "koopa", vivienda: "castillo de bowser", valor: 510},
-                    {nombre: "boo", genero: "másculino-femenino", especie: " boo", vivienda: "diferente", valor: 450},
-                    {nombre: "doonkey kong", genero: "másculino", especie: "gorila ", vivienda: "", valor: 850},
-                    {nombre: "diddy kong", genero: "másculino", especie: "chimpance", vivienda: "diferente", valor: 525},
-                    {nombre: "goomba", genero: "diferente", especie: "hongo", vivienda: "reino champiñon", valor: 300},
-                    {nombre: "kirby", genero: "másculino", especie: "desconocido", vivienda: "pop star", valor: 400}
+const personajes = [{nombre: "Mario Bros", valor: 1100, imagen: "./img/super-mario-bros-card.png", categoria: 1},
+                    {nombre: "Luigi", valor: 1030, imagen: "./img/luigi-card.png", categoria: 2},
+                    {nombre: "Princess Peach", valor: 1040, imagen: "./img/princess-peach-card.png", categoria: 3},
+                    {nombre: "Toad", valor: 500, imagen: "./img/toad-card.png", categoria: 4},
+                    {nombre: "Bowser", valor: 750, imagen: "./img/bowser-card.png", categoria: 5},
+                    {nombre: "Yoshi", valor: 800, imagen: "./img/yoshi-card.png", categoria: 6},
+                    {nombre: "Daisy", valor: 1000, imagen: "./img/daisy-princess-card.png", categoria: 7},
+                    {nombre: "Wario",  valor: 1000, imagen: "./img/wario-card.png", categoria: 8},
+                    {nombre: "Waluigi",  valor: 900, imagen: "./img/waluigi-card.png", categoria: 9},
+                    {nombre: "Rosalina",  valor: 1000, imagen: "./img/rosalina-card.png", categoria: 10},
+                    {nombre: "Bowser jr",  valor: 510, imagen: "./img/bowser-jr-card.png", categoria: 11},
+                    {nombre: "Boo",  valor: 450, imagen: "./img/boo-card.png", categoria: 12},
+                    {nombre: "Doonkey Kong",  valor: 850, imagen: "./img/donkey-kong-card.png", categoria: 13},
+                    {nombre: "Diddy Kong",  valor: 525, imagen: "./img/diddy-kong-card.png", categoria: 14},
+                    {nombre: "Goomba",  valor: 300, imagen: "./img/goomba-card.png", categoria: 15},
+                    {nombre: "Kirby",  valor: 400, imagen: "./img/kirby-card.png", categoria: 16}
 ]
 
 class compraPersonaje {
@@ -30,3 +29,11 @@ class compraPersonaje {
         }
     }
 }
+
+class contadorPersonaje {
+    constructor(personajesCarrito){
+        this.contadorFinal = personajesCarrito.length
+    }
+
+}
+

@@ -8,205 +8,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="js/clases.js"></script>
+    <script defer src="js/clases.js"></script>
     <script defer src="js/main.js"></script>
-    <title>Mario's Personajes</title>
+    <title>Mario Bros Store</title>
 </head>
 <body>
         <header>
             <a href="index.html" class="logo"><img src="./img/logo-mario-cuarto.png" alt=""></a>
-            <a href="carrito.html"><img src="./img/coin-card.png" alt="" class="coinIcon"></a>
-            
-            <nav>
-            
-            </nav>
+            <div class="carritoConteo">
+                <a href="carrito.html"><img src="./img/coin-card.png" alt="" class="coinIcon"></a>
+                <p class="conteo" id="contador"><span>0</span></p>
+            </div>
         </header>
         <main>
-            <h1>Mario Bros Store</h1> 
-
-            <div class="searchContainer">
-                <input type="search" id="" placeholder="Ingresa el nombre del personaje..">
-            </div>
+                <div class="mainContainer">
+                    <h1 id="titulo">Mario Bros Store</h1> 
+                    <h2>Realiza la busqueda ingresando <br> el nombre del  personaje que deseas elegir</h2>
+                    <div class="searchContainer">
+                        <input type="search" id="inputBusqueda" placeholder="Ingresa el nombre del personaje..">
+                    </div> 
+                </div>
             <div class="sectionContainer">
-                <aside>
-                    <ul class="filterCategory">
-                        <li><button>Nombre</button></li>
-                        <li><button>Genero</button></li>
-                        <li><button>Especie</button></li>
-                        <li><button>Vivienda</button></li>
-                        <li><button>Valor</button></li>
-                    </ul>
-                </aside>
                 
-                <div class="personajeCard">
-                    <h3>Mario Bros</h3>
-                    <img src="./img/super-mario-bros-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
 
-                <div class="personajeCard">
-                    <h3>Luigi</h3>
-                    <img src="./img/luigi-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Princess Peach</h3>
-                    <img src="./img/princess-peach-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Toad</h3>
-                    <img src="./img/toad-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Bowser</h3>
-                    <img src="./img/bowser-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Yoshi</h3>
-                    <img src="./img/yoshi-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Daisy</h3>
-                    <img src="./img/daisy-princess-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Wario</h3>
-                    <img src="./img/wario-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Waluigi</h3>
-                    <img src="./img/waluigi-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Rosalina</h3>
-                    <img src="./img/rosalina-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Bowser Jr</h3>
-                    <img src="./img/bowser-jr-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Boo</h3>
-                    <img src="./img/boo-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Doonkey Kong</h3>
-                    <img src="./img/donkey-kong-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Diddy Kong</h3>
-                    <img src="./img/diddy-kong-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Goomba</h3>
-                    <img src="./img/goomba-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p class="precioCard">$777</p>
-                    </div>
-                    
-                </div>
-
-                <div class="personajeCard">
-                    <h3>Kirby</h3>
-                    <img src="./img/kirby-card.png" alt="">
-                    <div class="subCard">
-                        <a href=""><p>Añadir al carrito</p></a>
-                        <p>$777</p>
-                    </div>
-                    
-                </div>
-            </div>
+            </div>    
         </main>
         <footer>
             <h3>Copyright 2023 - Ezequiel Quevedo</h3>
-
         </footer>
     
 </body>
 </html>
-
 
 
 

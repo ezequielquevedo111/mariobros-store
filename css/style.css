@@ -45,70 +45,68 @@ header .logo img{
 }
 
 header a .coinIcon{
-    height: 100px;
-    margin-top: 20px;
-    margin-bottom: auto;
+    height: 80px;
+}
+
+.carritoConteo{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.conteo{
+    color: #f3cc41;
 }
 
 h1{
-    padding: 50px;
+    padding: 90px;
     font-size: 70px;
-    color: #ffffff ;
+    height: 300px;
+    color: #ffffff;
     background-color: #161515;
     text-align: center;
 }
 
+h2{
+    text-align: center;
+    background-color: #151616;
+    color: #f3cc41;
+    font-size: 25px;
+    height: 120px;
+    padding-top: 20px;
+}
+
 .searchContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 30px;
     background-color: #161515;
+    height: 300px;
 }
 
 .searchContainer input{
     height: 50px;
+    width: 80%;
     background-color: #ffffff; 
     color: #161515;
-    border-radius: 10px;
+    border-radius: 7px;
+    
 }
 
+.searchContainer input::placeholder{
+    color: #161515;
+}
 
 .sectionContainer{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    background-color: rgb(255, 255, 255);
-}
-
-aside{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 100px;
     justify-content: center;
     background-color: #151616;
-    grid-row: span 9;
-    width: 250px;
-}
-.filterCategory{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 100px;
 }
 
-.filterCategory li{
-    margin: 20px;
-}
-
-.filterCategory li button{
-    background-color: #E21414;
-    color: #FFFAE7;
-    width: 130px;
-    height: 40px;
-    border-radius: 10px;
-}
 
 .personajeCard{
     display: flex;
@@ -117,15 +115,16 @@ aside{
     text-align: center;
     width: 250px;
     height: 350px;
-    background-color: #161515;
-    border-radius: 40px;
+    background-color: #f3cc41;
+    border-radius: 5.5px;
     margin-top: 35px;
     margin-bottom: 35px;
+    box-shadow: 15px 15px 5px 0 rgb(0, 0, 0, .19), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 
 .personajeCard h3{
     text-align: center;
-    color: #ffffff;
+    color: #151616;
     padding-bottom: 30px;
     
 }
@@ -135,7 +134,7 @@ aside{
     height: 125px;
     object-fit: contain;
     margin: auto;
-    
+    margin-bottom: 25px;    
 }
 
 .personajeCard .subCard{
@@ -146,46 +145,30 @@ aside{
 
 
 .personajeCard .subCard a{
-    color: #FFFAE7;
-    background-color: #E21414 ;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: auto;
+
+}
+
+.personajeCard .subCard  button{
+    transition: 0.2s;
     height: 40px;
     width: 100%;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 12px;
-    transition: 1s all;
-
-}
-
-.personajeCard .subCard a p{
-    transition: 0.2s;
-}
-
-.personajeCard .subCard a:hover{
-    background-color: #f3cc41;
-    
-}
-
-.personajeCard .subCard a p:hover{
-    color: #161515;
-}
-
-.personajeCard a p{
-    text-align: center;
-    
-}
-
-
-.personajeCard p{
     text-align: center;
     margin: auto;
     color: #ffffff;
-    
+    background-color: #E21414;
+    border-radius: 5.5px;
+    transition: 0.5s all;
+}
+
+.personajeCard .subCard  button:hover{
+    color: #161515;
+    background-color: #ffffff;
 }
 
 .containerCarrito{
@@ -195,6 +178,7 @@ aside{
     height: 1800px;
     justify-content: center;
     align-items: center;
+    background-color: #f3cc41;
 }
 
 .containerCarrito h2{
@@ -206,7 +190,8 @@ aside{
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 150px 150px;
-    background-color: #f3cc41;
+    background-color: #161515;
+    color: #ffffff;
     margin: 30px;
     border-radius: 10px;
 }
@@ -238,6 +223,7 @@ aside{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f3cc41;
 }
 
 .botonFinalizar button{
@@ -250,21 +236,38 @@ aside{
 }
 
 .botonFinalizar button:hover{
-    background-color: #f3cc41;
+    background-color: #ffffff;
     color: #161515;
     
 }
 
+.containerError{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 35px;
+    color: #ffffff;
+}
+
+.containerError h3{
+    font-size: 40px;
+}
+
+.containerError h4{
+    font-size: 25px;
+}
+
 
 footer{
-    background-color: #161515;
+    background-color: #f3cc41;
+    color: #161515;
     height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #ffffff;
-
-
 }
 
 
