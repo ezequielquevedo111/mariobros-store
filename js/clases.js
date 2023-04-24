@@ -1,6 +1,4 @@
 /* CLASES DE JAVASCRIPT Y VARIABLES GLOBALES*/
-const personajesCarrito = []
-
 const personajes = [{nombre: "Mario Bros", valor: 1100, imagen: "./img/super-mario-bros-card.png", categoria: 1},
                     {nombre: "Luigi", valor: 1030, imagen: "./img/luigi-card.png", categoria: 2},
                     {nombre: "Princess Peach", valor: 1040, imagen: "./img/princess-peach-card.png", categoria: 3},
@@ -18,22 +16,3 @@ const personajes = [{nombre: "Mario Bros", valor: 1100, imagen: "./img/super-mar
                     {nombre: "Goomba",  valor: 300, imagen: "./img/goomba-card.png", categoria: 15},
                     {nombre: "Kirby",  valor: 400, imagen: "./img/kirby-card.png", categoria: 16}
 ]
-
-class compraPersonaje {
-    constructor(personajesCarrito){
-        this.carritoFinal = personajesCarrito
-    }
-    precioFinal() {
-        if(this.carritoFinal.length > 0){
-            return this.carritoFinal.reduce((acc, personaje1) => acc + personaje1.valor, 0)
-        }
-    }
-}
-
-class contadorPersonaje {
-    constructor(personajesCarrito){
-        this.contadorFinal = personajesCarrito.length
-    }
-
-}
-

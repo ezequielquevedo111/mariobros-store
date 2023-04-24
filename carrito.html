@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/clases.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/finalizarPage.js" ></script>
+
     <title>Mario's Personajes</title>
 </head>
 <body>
@@ -17,50 +19,20 @@
             <a href="index.html" class="logo"><img src="./img/logo-mario-cuarto.png" alt=""></a>
             <div class="carritoConteo">
                 <a href="carrito.html"><img src="./img/coin-card.png" alt="" class="coinIcon"></a>
-                <p class="conteo"><span>0</span></p>
+                <p class="conteo"><span id="contador">0</span></p>
             </div>
         </header>
 
         <main>
             <h1>Mario Bros Store</h1>
-        <div class="containerCarrito">
-            <!-- <h2>Personajes Seleccionados</h2>
-            <div class="personajeCardCarrito">
-                <div>
-                    <h3>Mario Bros</h3>
-                    <img src="./img/super-mario-bros-card.png" alt="">
-                </div>
-                <p>Cantidad: 1</p>
-                <p>$777</p>
-            </div>
+            <h2>Personajes Seleccionados</h2>
+        <div class="contenedorCarrito" id="containerCarrito">
 
-            <div class="personajeCardCarrito">
-                <div>
-                    <h3>Mario Bros</h3>
-                    <img src="./img/super-mario-bros-card.png" alt="">
-                </div>
-                <p>Cantidad: 1</p>
-                <p>$777</p>
-            </div>
-
-            <div class="personajeCardCarrito">
-                <div>
-                    <h3>Mario Bros</h3>
-                    <img src="./img/super-mario-bros-card.png" alt="">
-                </div>
-                <p>Cantidad: 1</p>
-                <p>$777</p>
-            </div>
-
-            <div class="personajeCardCarrito">
-                <div>
-                    <h3>Mario Bros</h3>
-                    <img src="./img/super-mario-bros-card.png" alt="">
-                </div>
-                <p>Cantidad: 1</p>
-                <p>$777</p>
-            </div> -->
         </div>
+        <div class="totalCard">
+            <p class="total" id="total">Total: </p>
+        </div>
+
         <div class="botonFinalizar">
             <a href=""><button>Finalizar compra</button></a>
         </div>
