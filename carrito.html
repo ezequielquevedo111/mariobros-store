@@ -7,16 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/clases.js"></script>
+    <script defer src="js/clases.js"></script>
     <script defer src="js/finalizarPage.js" ></script>
-
-    <title>Mario's Personajes</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Mario Bros Store</title>
 </head>
 <body>
         <header>
-            <a href="index.html" class="logo"><img src="./img/logo-mario-cuarto.png" alt=""></a>
+            <a href="index.html" class="logo"><img src="./img/logo-mario.png" alt=""></a>
             <div class="carritoConteo">
                 <a href="carrito.html"><img src="./img/coin-card.png" alt="" class="coinIcon"></a>
                 <p class="conteo"><span id="contador">0</span></p>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="botonFinalizar">
-            <a href=""><button>Finalizar compra</button></a>
+            <button id="botonFinalizar" type="submit">Finalizar compra</button>
         </div>
         </main>
 

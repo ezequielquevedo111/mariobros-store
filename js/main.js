@@ -58,6 +58,17 @@ function activarBotonSeleccionarPersonaje(){
         for (const botonAgregar  of botonesAgregar) {
             botonAgregar.onclick = () =>{
                 let personajeEncontrado = personajes.find(personaje => personaje.categoria === parseInt(botonAgregar.id))
+                Swal.fire({
+                    text: 'Has seleccionado a ' + personajeEncontrado.nombre,
+                    toast: true,
+                    showCloseButtom: true,
+                    position: 'bottom-right',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    background: '#e21414',
+                    color: '#ffffff',
+                    confirmButtonColor: '#151616',
+                })
                 personajesCarrito.push(personajeEncontrado)
                 almacenarPersonajesCarrito()
                 mostrarConteoPersonajes()

@@ -14,5 +14,9 @@ const personajes = [{nombre: "Mario Bros", valor: 1100, imagen: "./img/super-mar
                     {nombre: "Doonkey Kong",  valor: 850, imagen: "./img/donkey-kong-card.png", categoria: 13},
                     {nombre: "Diddy Kong",  valor: 525, imagen: "./img/diddy-kong-card.png", categoria: 14},
                     {nombre: "Goomba",  valor: 300, imagen: "./img/goomba-card.png", categoria: 15},
-                    {nombre: "Kirby",  valor: 400, imagen: "./img/kirby-card.png", categoria: 16}
+                    {nombre: "Kirby",  valor: 400, imagen: "./img/kirby-card.png", categoria: 16},
+                    {nombre: "Koopa Troopa", valor: 350, imagen: "./img/koopa-troopa-card.png", categoria: 17},
+                    {nombre: "Shy Guy", valor: 250, imagen: "./img/shy-guy-card.png", categoria: 18}
+                    
 ]
+
