@@ -20,3 +20,23 @@ const personajes = [{nombre: "Mario Bros", valor: 1100, imagen: "./img/super-mar
                     
 ]
 
+const personajesCarrito = []
+const contadorCarrito = document.getElementById('contador')
+
+function almacenarPersonajesCarrito() {
+    localStorage.setItem('personajesGuardados', JSON.stringify(personajesCarrito))
+}
+
+function devolverPersonajesCarrito () {
+    const devolverPersonajesGuardados = JSON.parse(localStorage.getItem('personajesGuardados')) || []
+    personajesCarrito.push(...devolverPersonajesGuardados) 
+    mostrarConteoPersonajes()
+}
+
+function mostrarConteoPersonajes(){
+    let contador = 0
+    contador += personajesCarrito.length
+    contadorCarrito.innerHTML = contador
+
+}
+

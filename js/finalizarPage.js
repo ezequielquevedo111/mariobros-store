@@ -1,22 +1,7 @@
-const carritoDePersonajes = []
 const contenedorCardsCarrito = document.querySelector("div.contenedorCarrito")
-const contadorCantidadCarrito = document.getElementById("contador")
 const total = document.getElementById("total")
 const botonFinalizar = document.getElementById("botonFinalizar")
-
-
-function recuperarCarrito () {
-    const devolverPersonajesGuardados = JSON.parse(localStorage.getItem('personajesGuardados')) || []
-    devolverPersonajesGuardados.forEach(personaje => {
-        carritoDePersonajes.push(personaje)
-    });
-    
-}
-function guardarCarrito () {
-    localStorage.setItem('personajesGuardados', JSON.stringify(carritoDePersonajes))
-}
-
-recuperarCarrito()
+devolverPersonajesCarrito()
 
 function aplicarCardsCarrito (personaje) {
     return `<div class="personajeCard">
@@ -31,17 +16,15 @@ function aplicarCardsCarrito (personaje) {
             
 }
 
-function cargarCardsCarrito (carritoDePersonajes) {
+function cargarCardsCarrito (personajesCarrito) {
     contenedorCardsCarrito.innerHTML = ""
-    carritoDePersonajes.forEach(carritoDePersonaje => {
-        contenedorCardsCarrito.innerHTML += aplicarCardsCarrito(carritoDePersonaje)
+    personajesCarrito.forEach(personaje => {
+        contenedorCardsCarrito.innerHTML += aplicarCardsCarrito(personaje)
         
     });
     
-    carritoDePersonajes.length <= 0 && mensajeCarritoVacio()
+    personajesCarrito.length <= 0 && mensajeCarritoVacio()
 }
-
-
 
 const mensajeCarritoVacio = () => {
     contenedorCardsCarrito.innerHTML = `
@@ -52,18 +35,11 @@ const mensajeCarritoVacio = () => {
                                 `
 }
 
-
-function mostrarConteoPersonajes(){
-    let contador = 0
-    contador += carritoDePersonajes.length
-    contadorCantidadCarrito.innerHTML = contador
-
-}
 mostrarConteoPersonajes()
 
 const finalizarSeleccion = () =>{
-    if(carritoDePersonajes.length !== 0){
-        const carritoFinal = carritoDePersonajes.reduce((acc, personaje) => acc + personaje.valor, 0)
+    if(personajesCarrito.length !== 0){
+        const carritoFinal = personajesCarrito.reduce((acc, personaje) => acc + personaje.valor, 0)
         return total.innerHTML = carritoFinal
     } else{
         mensajeCarritoVacio()
@@ -78,11 +54,11 @@ function buscarIndice()  {
     for (const botonQuitar of botonesQuitar) {
         botonQuitar.addEventListener("click", () => {
             let personajeQuitado = []
-            let i = carritoDePersonajes.findIndex((personaje) => personaje.categoria == botonQuitar.id)
-            let personajeAQuitar = carritoDePersonajes.forEach((personaje) => {
-                personajeQuitado = carritoDePersonajes[i].nombre 
+            let i = personajesCarrito.findIndex((personaje) => personaje.categoria == botonQuitar.id)
+            let personajeAQuitar = personajesCarrito.forEach((personaje) => {
+                personajeQuitado = personajesCarrito[i].nombre 
             })
-            carritoDePersonajes.splice(i, 1)
+            personajesCarrito.splice(i, 1)
             Swal.fire({
                         text: 'Has quitado a ' + personajeQuitado,
                         toast: true,
@@ -93,22 +69,15 @@ function buscarIndice()  {
                         color: '#ffffff',
                         confirmButtonColor: '#151616',
                     })
-            guardarCarrito(carritoDePersonajes)
-            cargarCardsCarrito(carritoDePersonajes)
-            mostrarConteoPersonajes(carritoDePersonajes.length)
+            almacenarPersonajesCarrito(personajesCarrito)
+            cargarCardsCarrito(personajesCarrito)
+            mostrarConteoPersonajes(personajesCarrito.length)
             finalizarSeleccion()
             buscarIndice()
         })
         
     }
 }
-
-// function darMensajeError (){
-//     let mensajeError = Swal.fire({
-//         title: 'No has seleccionado ningún personaje',
-//         icon: 'warning'
-//     }) 
-// }
 
 function activarBotonFinal() {
     botonFinalizar.addEventListener("click", () => {
@@ -121,11 +90,11 @@ function activarBotonFinal() {
             color: '#ffffff',
             confirmButtonColor: '#e21414',
         }).then((result) =>{
-            if(result.isConfirmed && carritoDePersonajes.length > 0){
-                carritoDePersonajes.length = 0
-                guardarCarrito(carritoDePersonajes)
-                cargarCardsCarrito(carritoDePersonajes)
-                mostrarConteoPersonajes(carritoDePersonajes.length)
+            if(result.isConfirmed && personajesCarrito.length > 0){
+                personajesCarrito.length = 0
+                almacenarPersonajesCarrito(personajesCarrito)
+                cargarCardsCarrito(personajesCarrito)
+                mostrarConteoPersonajes(personajesCarrito.length)
                 finalizarSeleccion()
                 Swal.fire({
                     toast: true,
@@ -137,7 +106,7 @@ function activarBotonFinal() {
                     timerProgressBar: true,
                 }
                 )
-            } else if(result.isConfirmed && carritoDePersonajes.length <= 0) {
+            } else if(result.isConfirmed && personajesCarrito.length <= 0) {
                 Swal.fire({
                     toast: true,
                     text: 'No has seleccionado ningún personaje en tu carrito, dirigete al inicio.',
@@ -154,6 +123,6 @@ function activarBotonFinal() {
     })
 }
 
-cargarCardsCarrito(carritoDePersonajes)
-carritoDePersonajes.length > 0 ? activarBotonFinal() : mensajeCarritoVacio()
-carritoDePersonajes.length > 0 ? buscarIndice() : mensajeCarritoVacio()
+cargarCardsCarrito(personajesCarrito)
+personajesCarrito.length > 0 ? activarBotonFinal() : mensajeCarritoVacio()
+personajesCarrito.length > 0 ? buscarIndice() : mensajeCarritoVacio()

@@ -1,20 +1,11 @@
+const sectionContainer = document.querySelector('.sectionContainer')
+const inputBuscador = document.querySelector('input#inputBusqueda')
 // Funciones Principales //
 const buscarNombrePersonaje = (personajeIngresado) => {
     const personajeEncontrado = personajes.filter((personaje) => personaje.nombre.toLowerCase().includes(personajeIngresado.toLowerCase().trim()))
     personajeEncontrado.length > 0 ? cargarCardsHtml(personajeEncontrado) : errorBusqueda()
 }
-
-// Cargar Cards y Eventos DOM//
-
 // DOM index//
-const personajesCarrito = []
-const sectionContainer = document.querySelector('.sectionContainer')
-const contadorSeleccion = document.querySelector('p#contador')
-const inputBuscador = document.querySelector('input#inputBusqueda')
-const contadorCarrito = document.getElementById('contador')
-const contenedorCarritoCard = document.querySelector('.containerCarrito')
-
-
 const errorBusqueda = () => {
     sectionContainer.innerHTML = `
                                     <div class= "containerError">
@@ -52,7 +43,6 @@ inputBuscador.addEventListener("search", (e) =>{
     buscarNombrePersonaje(e.target.value)
 })
 
-
 function activarBotonSeleccionarPersonaje(){
     const botonesAgregar = document.querySelectorAll(".botonAgregar")
         for (const botonAgregar  of botonesAgregar) {
@@ -75,25 +65,7 @@ function activarBotonSeleccionarPersonaje(){
             }
         }
 }
-
 // DOM index//
 
-/*Almacenar personajes en Local Storage*/
 
-function almacenarPersonajesCarrito () {
-    localStorage.setItem('personajesGuardados', JSON.stringify(personajesCarrito))
-}
-
-function devolverPersonajesCarrito () {
-    const devolverPersonajesGuardados = JSON.parse(localStorage.getItem('personajesGuardados')) || []
-    personajesCarrito.push(...devolverPersonajesGuardados) 
-    mostrarConteoPersonajes()
-}
-
-function mostrarConteoPersonajes(){
-    let contador = 0
-    contador += personajesCarrito.length
-    contadorCarrito.innerHTML = contador
-
-}
 
