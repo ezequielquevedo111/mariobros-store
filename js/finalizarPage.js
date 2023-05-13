@@ -103,12 +103,12 @@ function buscarIndice()  {
     }
 }
 
-function darMensajeError (){
-    let mensajeError = Swal.fire({
-        title: 'No has seleccionado ningún personaje',
-        icon: 'warning'
-    }) 
-}
+// function darMensajeError (){
+//     let mensajeError = Swal.fire({
+//         title: 'No has seleccionado ningún personaje',
+//         icon: 'warning'
+//     }) 
+// }
 
 function activarBotonFinal() {
     botonFinalizar.addEventListener("click", () => {
@@ -130,15 +130,24 @@ function activarBotonFinal() {
                 Swal.fire({
                     toast: true,
                     text: 'Muchas gracias por tu compra.',
-                    background: '#e21414',
+                    background: '#151616',
                     color: '#ffffff',
                     showConfirmButton: false,
                     timer: 1500,
                     timerProgressBar: true,
                 }
                 )
-            } else if(result.isDenied){
-                darMensajeError()
+            } else if(result.isConfirmed && carritoDePersonajes.length <= 0) {
+                Swal.fire({
+                    toast: true,
+                    text: 'No has seleccionado ningún personaje en tu carrito, dirigete al inicio.',
+                    background: '#e21414',
+                    color: '#ffffff',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    timerProgressBar: true,
+                }
+                )
             }
         } )
         
