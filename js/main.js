@@ -1,11 +1,26 @@
 const sectionContainer = document.querySelector('.sectionContainer')
 const inputBuscador = document.querySelector('input#inputBusqueda')
-// Funciones Principales //
+
+async function traerPersonajes() {
+    try{
+        const respuesta = await fetch(UrlJson)
+        const data = await respuesta.json()
+            personajes.push(...data)
+            cargarCardsHtml(personajes)
+    }
+    catch(error){
+        errorBusqueda()
+    }
+    
+}
+traerPersonajes()
+
+/*Funcion principal de busqueda*/
 const buscarNombrePersonaje = (personajeIngresado) => {
     const personajeEncontrado = personajes.filter((personaje) => personaje.nombre.toLowerCase().includes(personajeIngresado.toLowerCase().trim()))
-    personajeEncontrado.length > 0 ? cargarCardsHtml(personajeEncontrado) : errorBusqueda()
+        personajeEncontrado.length > 0 ? cargarCardsHtml(personajeEncontrado) : errorBusqueda()
 }
-// DOM index//
+
 const errorBusqueda = () => {
     sectionContainer.innerHTML = `
                                     <div class= "containerError">
@@ -27,22 +42,22 @@ function aplicarCardsHtml(personaje){
                 </div>
     `
 }
-
+/*Cargo las cards*/
 function cargarCardsHtml(personajes){
     sectionContainer.innerHTML = ""
     personajes.forEach((personaje) => {
-        sectionContainer.innerHTML += aplicarCardsHtml(personaje)
-    });
-    activarBotonSeleccionarPersonaje()
+            sectionContainer.innerHTML += aplicarCardsHtml(personaje)
+        });
+            activarBotonSeleccionarPersonaje()
 }
 
-cargarCardsHtml(personajes)
 devolverPersonajesCarrito()
 
 inputBuscador.addEventListener("search", (e) =>{
     buscarNombrePersonaje(e.target.value)
 })
 
+/*Activo el boton para agregar los personajes con el evento*/
 function activarBotonSeleccionarPersonaje(){
     const botonesAgregar = document.querySelectorAll(".botonAgregar")
         for (const botonAgregar  of botonesAgregar) {
@@ -59,13 +74,13 @@ function activarBotonSeleccionarPersonaje(){
                     color: '#ffffff',
                     confirmButtonColor: '#151616',
                 })
-                personajesCarrito.push(personajeEncontrado)
-                almacenarPersonajesCarrito()
-                mostrarConteoPersonajes()
+                    personajesCarrito.push(personajeEncontrado)
+                    almacenarPersonajesCarrito()
+                    mostrarConteoPersonajes()
             }
         }
 }
-// DOM index//
+
 
 
 

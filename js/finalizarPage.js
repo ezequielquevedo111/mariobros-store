@@ -15,17 +15,15 @@ function aplicarCardsCarrito (personaje) {
             `
             
 }
-
+/*Cargo las cards*/
 function cargarCardsCarrito (personajesCarrito) {
     contenedorCardsCarrito.innerHTML = ""
-    personajesCarrito.forEach(personaje => {
-        contenedorCardsCarrito.innerHTML += aplicarCardsCarrito(personaje)
-        
-    });
-    
-    personajesCarrito.length <= 0 && mensajeCarritoVacio()
+        personajesCarrito.forEach(personaje => {
+            contenedorCardsCarrito.innerHTML += aplicarCardsCarrito(personaje)
+        });
+        personajesCarrito.length <= 0 && mensajeCarritoVacio()
 }
-
+/*Mensaje que ataja el carrito vacio*/
 const mensajeCarritoVacio = () => {
     contenedorCardsCarrito.innerHTML = `
                                     <div class= "containerError">
@@ -37,6 +35,7 @@ const mensajeCarritoVacio = () => {
 
 mostrarConteoPersonajes()
 
+/*Calculo el total de los personajes que seleccioné*/
 const finalizarSeleccion = () =>{
     if(personajesCarrito.length !== 0){
         const carritoFinal = personajesCarrito.reduce((acc, personaje) => acc + personaje.valor, 0)
@@ -49,6 +48,7 @@ const finalizarSeleccion = () =>{
 
 finalizarSeleccion()
 
+/*Agrego la funcionalidad de quitar el personaje del carrito mediante un indice*/
 function buscarIndice()  {
     const botonesQuitar = document.querySelectorAll(".botonQuitar")
     for (const botonQuitar of botonesQuitar) {
@@ -69,16 +69,17 @@ function buscarIndice()  {
                         color: '#ffffff',
                         confirmButtonColor: '#151616',
                     })
-            almacenarPersonajesCarrito(personajesCarrito)
-            cargarCardsCarrito(personajesCarrito)
-            mostrarConteoPersonajes(personajesCarrito.length)
-            finalizarSeleccion()
-            buscarIndice()
+                    almacenarPersonajesCarrito(personajesCarrito)
+                    cargarCardsCarrito(personajesCarrito)
+                    mostrarConteoPersonajes(personajesCarrito.length)
+                    finalizarSeleccion()
+                    buscarIndice()
         })
         
     }
 }
 
+/*Activo el boton que finaliza la compra junto al posible atajo*/
 function activarBotonFinal() {
     botonFinalizar.addEventListener("click", () => {
         let fin = Swal.fire({
@@ -96,25 +97,25 @@ function activarBotonFinal() {
                 cargarCardsCarrito(personajesCarrito)
                 mostrarConteoPersonajes(personajesCarrito.length)
                 finalizarSeleccion()
-                Swal.fire({
-                    toast: true,
-                    text: 'Muchas gracias por tu compra.',
-                    background: '#151616',
-                    color: '#ffffff',
-                    showConfirmButton: false,
-                    timer: 1500,
-                    timerProgressBar: true,
-                }
-                )
+                    Swal.fire({
+                        toast: true,
+                        text: 'Muchas gracias por tu compra.',
+                        background: '#151616',
+                        color: '#ffffff',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        timerProgressBar: true,
+                    }
+                    )
             } else if(result.isConfirmed && personajesCarrito.length <= 0) {
-                Swal.fire({
-                    toast: true,
-                    text: 'No has seleccionado ningún personaje en tu carrito, dirigete al inicio.',
-                    background: '#e21414',
-                    color: '#ffffff',
-                    showConfirmButton: false,
-                    timer: 2000,
-                    timerProgressBar: true,
+                    Swal.fire({
+                        toast: true,
+                        text: 'No has seleccionado ningún personaje en tu carrito, dirigete al inicio.',
+                        background: '#e21414',
+                        color: '#ffffff',
+                        showConfirmButton: false,
+                        timer: 2000,
+                        timerProgressBar: true,
                 }
                 )
             }

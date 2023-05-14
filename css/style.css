@@ -248,3 +248,80 @@ footer{
 footer h3:hover{
     color: #E21414;
 }
+
+@media screen and (max-width: 400px) {
+    header{
+        padding: 20px;
+        column-gap: 145px;
+    }
+    
+
+    header .logo img {
+        width: 120px;
+        height: 100px;
+    }
+
+    header .carritoConteo a .coinIcon {
+        height: 35px;
+    }
+
+    .mainContainer h1 {
+        padding: 30px;
+        font-size: 30px;
+        height: 150px;
+    }
+
+    .mainContainer h2 {
+        font-size: 15px;
+        height: 100px;
+        padding-top: 15px;
+    }
+
+    .searchContainer {
+        padding: 0px;
+        height: 250px;
+    }
+
+    .searchContainer input {
+        height: 50px;
+        width: 300px;
+        font-size: 8px;
+    }
+
+    .personajeCard {
+        width: 200px;
+        height: 300px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+
+    .personajeCard h3 {
+        padding-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .personajeCard img {
+        width: 145px;
+        height: 100px;
+        margin: auto;
+    }
+
+    .personajeCard .subCard p{
+        font-size: 15px;
+    }
+
+    .personajeCard .subCard button {
+        height: 35px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    footer {
+        height: 100px;
+        justify-content: center;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+    
+
