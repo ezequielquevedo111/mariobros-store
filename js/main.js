@@ -54,7 +54,7 @@ function cargarCardsHtml(personajes){
 devolverPersonajesCarrito()
 
 inputBuscador.addEventListener("search", (e) =>{
-    buscarNombrePersonaje(e.target.value)
+        buscarNombrePersonaje(e.target.value)
 })
 
 /*Activo el boton para agregar los personajes con el evento*/
