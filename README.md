@@ -6,4 +6,3 @@
 
 -Además se implementa en uso de LocalStorage para poder almacenar diferentes datos en conjunto con AJAX y Fetch para simular el backend de la misma. 👨‍💻👨‍💻
 
-Actualmente se encuentra en proceso de finalización para poder subirlo a Netlify.
