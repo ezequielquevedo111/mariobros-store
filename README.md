@@ -6,3 +6,7 @@
 
 -Además se implementa en uso de LocalStorage para poder almacenar diferentes datos en conjunto con AJAX y Fetch para simular el backend de la misma. 👨‍💻👨‍💻
 
+![brosss](https://github.com/ezequielquevedo111/mariobros-store/assets/109804108/c1bee981-50ae-4825-87fc-dabcfd06e9dd)
+![bros2](https://github.com/ezequielquevedo111/mariobros-store/assets/109804108/bc156c4d-3d34-4480-9ddf-b0dc93b59e26)
+![bros](https://github.com/ezequielquevedo111/mariobros-store/assets/109804108/2ea37299-4ded-4046-a8a2-31a46374a405)
+![mario](https://github.com/ezequielquevedo111/mariobros-store/assets/109804108/202384d0-16fe-42e1-bcbb-63a55c6a9a07)
